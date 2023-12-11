@@ -18,6 +18,8 @@ export const loader = async () => {
 export default function JokesRoute() {
 	const data = useLoaderData<typeof loader>();
 
+	console.log("kokodayo", data);
+
 	return (
 		<div className="jokes-layout">
 			<header className="jokes-header">
