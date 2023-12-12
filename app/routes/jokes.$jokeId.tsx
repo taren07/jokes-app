@@ -17,6 +17,10 @@ export const loader = async ({ params }: LoaderFunctionArgs) => {
 export default function JokeRoute() {
 	const data = useLoaderData<typeof loader>();
 
+	if (!data) {
+		return <div>No joke found.</div>;
+	}
+
 	return (
 		<div>
 			<p>Here's your hilarious joke:</p>
